@@ -1,0 +1,32 @@
+.marca-land {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: max-content;
+  color: var(--color-marca, #fff);
+}
+.marca-land .marca-acento {
+  width: 4px;
+  height: 31px;
+  border-radius: 8px;
+  background: linear-gradient(
+    180deg,
+    var(--color-azul-cian),
+    var(--color-azul-principal)
+  );
+}
+.marca-land strong {
+  display: block;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 0.16em;
+}
+.marca-land small {
+  display: block;
+  margin-top: 5px;
+  color: var(--color-marca-secundario, rgba(255, 255, 255, 0.66));
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}

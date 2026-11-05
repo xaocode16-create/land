@@ -1,0 +1,23 @@
+{
+  "files.exclude": {
+    "**/.next": true,
+    "**/.next-*": true,
+    "**/node_modules": true,
+    "**/*.tsbuildinfo": true,
+    "**/prueba-escritura": true
+  },
+  "search.exclude": {
+    "**/.next": true,
+    "**/.next-*": true,
+    "**/node_modules": true,
+    "**/*.tsbuildinfo": true,
+    "**/prueba-escritura": true
+  },
+  "files.watcherExclude": {
+    "**/.next/**": true,
+    "**/.next-*/**": true,
+    "**/node_modules/**": true,
+    "**/*.tsbuildinfo": true,
+    "**/prueba-escritura/**": true
+  }
+}

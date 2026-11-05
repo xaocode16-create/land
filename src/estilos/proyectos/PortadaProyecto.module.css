@@ -1,0 +1,54 @@
+.portada-proyecto {
+  position: relative;
+  min-height: min(550px, 68vh);
+  overflow: hidden;
+  color: #fff;
+  background: #071625;
+}
+.portada-fondo,
+.portada-capa {
+  position: absolute;
+  inset: 0;
+}
+.portada-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .92;
+  filter: saturate(.94) contrast(.98);
+}
+.portada-capa {
+  background: linear-gradient(90deg, rgba(4, 16, 31, .7), rgba(4, 16, 31, .38) 58%, rgba(4, 16, 31, .1)), linear-gradient(0deg, rgba(4, 16, 31, .34), transparent 62%);
+}
+.portada-contenido {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: end;
+  min-height: min(550px, 68vh);
+  padding: 118px 0 58px;
+}
+.portada-texto { max-width: 720px; text-align: left; }
+.portada-sello,
+.portada-ubicacion {
+  display: block;
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, .74);
+  font-size: .73rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.portada-sello::before { content: ""; display: inline-block; width: 28px; height: 2px; margin: 0 10px 3px 0; background: var(--color-azul-cian); }
+.portada-ubicacion { margin-bottom: 8px; color: #9aeaff; letter-spacing: .08em; }
+.portada-proyecto h1 { max-width: 700px; margin: 0; font-family: "Manrope", "Segoe UI", sans-serif; font-size: clamp(2.1rem, 4.4vw, 3.8rem); line-height: 1.02; letter-spacing: -.06em; text-align: left; }
+.portada-titulo { max-width: 620px; margin: 28px 0 12px; color: #fff; font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 700; line-height: 1.1; }
+.portada-descripcion { max-width: 570px; margin: 0 0 30px; color: rgba(255, 255, 255, .78); font-size: .98rem; line-height: 1.7; }
+.portada-acciones { display: flex; flex-wrap: wrap; gap: 12px; }
+.control-video { position: absolute; right: 0; bottom: 78px; display: inline-flex; align-items: center; gap: 8px; min-height: 42px; border: 1px solid rgba(255,255,255,.32); border-radius: 999px; padding: 0 15px; color: #fff; background: rgba(4,16,31,.3); font-size: .82rem; font-weight: 800; backdrop-filter: blur(12px); }
+.control-video:hover { border-color: var(--color-azul-cian); background: rgba(4,140,244,.38); }
+@media (max-width: 700px) {
+  .portada-contenido { min-height: min(470px, 62vh); padding: 100px 0 78px; }
+  .portada-proyecto h1 { font-size: clamp(2.05rem, 9vw, 3.3rem); }
+  .control-video { right: 0; bottom: 30px; }
+}

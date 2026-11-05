@@ -1,0 +1,27 @@
+.contenedor-plano { display: grid; gap: 14px; }
+.controles-plano { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.controles-plano button { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border: 1px solid #dce7f0; border-radius: 10px; color: var(--color-azul-noche); background: #fff; }
+.controles-plano button:hover:not(:disabled) { border-color: var(--color-azul-principal); color: var(--color-azul-principal); }
+.controles-plano button:disabled { opacity: .4; cursor: not-allowed; }
+.controles-plano > span:not(.ayuda-plano) { min-width: 48px; color: var(--color-texto-secundario); font-size: .78rem; font-weight: 800; text-align: center; }
+.ayuda-plano { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; color: var(--color-texto-secundario); font-size: .78rem; }
+.marco-plano { overflow: hidden; border: 1px solid #d9e5ee; border-radius: 18px; padding: 12px; background: #eaf1f5; box-shadow: var(--sombra-elegante); }
+.visor-plano { position: relative; aspect-ratio: 1324 / 1188; overflow: hidden; touch-action: none; cursor: grab; background: #fff; }
+.visor-plano.arrastrando { cursor: grabbing; }
+.lienzo-plano { width: 100%; height: 100%; transform-origin: center center; will-change: transform; }
+.svg-plano { display: block; width: 100%; height: 100%; }
+.poligono-lote { fill: rgba(4,140,244,.04); stroke: rgba(4,140,244,.06); stroke-width: 2.2; vector-effect: non-scaling-stroke; cursor: pointer; outline: none; transition: fill .2s ease, stroke .2s ease, filter .2s ease; }
+.poligono-lote:hover,
+.poligono-lote:focus-visible { fill: rgba(4,140,244,.1); stroke: var(--color-azul-principal); stroke-width: 2.8; filter: drop-shadow(0 0 3px rgba(4,140,244,.24)); }
+.poligono-seleccionado { fill: rgba(0,200,248,.46); stroke: #006fa7; stroke-width: 4.5; animation: pulsoLote 1.7s ease-in-out infinite; }
+.poligono-pendiente { fill: rgba(99,115,130,.08); stroke: rgba(99,115,130,.26); stroke-dasharray: 7 5; }
+.poligono-seleccionado.poligono-pendiente { fill: rgba(0,200,248,.42); stroke: #006fa7; stroke-dasharray: none; }
+.leyenda-plano { display: flex; flex-wrap: wrap; gap: 14px 22px; color: var(--color-texto-secundario); font-size: .78rem; }
+.leyenda-plano span { display: inline-flex; align-items: center; gap: 7px; }
+.punto-leyenda { width: 11px; height: 11px; border-radius: 50%; background: #99a7b4; box-shadow: 0 0 0 3px rgba(153,167,180,.15); }
+.punto-leyenda[data-estado="disponible"] { background: #1fa774; box-shadow: 0 0 0 3px rgba(31,167,116,.14); }
+.punto-leyenda[data-estado="reservado"] { background: #dbac1b; box-shadow: 0 0 0 3px rgba(219,172,27,.14); }
+.punto-leyenda[data-estado="vendido"] { background: #d45656; box-shadow: 0 0 0 3px rgba(212,86,86,.14); }
+.nota-plano { margin: 0; color: var(--color-texto-secundario); font-size: .78rem; line-height: 1.55; }
+@keyframes pulsoLote { 0%, 100% { filter: drop-shadow(0 0 0 rgba(0,200,248,0)); } 50% { filter: drop-shadow(0 0 8px rgba(0,200,248,.5)); } }
+@media (max-width: 640px) { .ayuda-plano { width: 100%; margin-left: 0; } .marco-plano { padding: 6px; border-radius: 13px; } .leyenda-plano { gap: 8px 14px; } }

@@ -1,0 +1,108 @@
+.galeria-proyecto {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 12px;
+  margin: 30px 0 64px;
+}
+.galeria-miniatura {
+  position: relative;
+  min-height: 170px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 13px;
+  padding: 0;
+  background: #dbe8f1;
+}
+.galeria-miniatura:first-child {
+  grid-row: span 2;
+  min-height: 352px;
+}
+.galeria-miniatura img {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.galeria-miniatura:hover img {
+  transform: scale(1.045);
+}
+.visor-galeria {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgba(2, 10, 21, 0.92);
+}
+.visor-contenido {
+  position: relative;
+  width: min(1000px, 100%);
+  height: min(76vh, 700px);
+}
+.visor-contenido img {
+  object-fit: contain;
+}
+.visor-cerrar {
+  position: absolute;
+  z-index: 2;
+  top: -42px;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  color: #fff;
+  background: transparent;
+}
+.visor-navegacion {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(8, 19, 36, 0.5);
+  transform: translateY(-50%);
+}
+.visor-anterior {
+  left: -60px;
+}
+.visor-siguiente {
+  right: -60px;
+}
+
+@media (max-width: 640px) {
+  .galeria-proyecto {
+    grid-template-columns: 1fr 1fr;
+  }
+  .galeria-miniatura:first-child {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 250px;
+  }
+  .galeria-miniatura {
+    min-height: 145px;
+  }
+  .visor-navegacion {
+    width: 38px;
+    height: 38px;
+  }
+  .visor-anterior {
+    left: 8px;
+  }
+  .visor-siguiente {
+    right: 8px;
+  }
+  .visor-cerrar {
+    top: -46px;
+    right: 2px;
+  }
+}

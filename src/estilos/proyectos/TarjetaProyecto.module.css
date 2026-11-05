@@ -1,0 +1,109 @@
+.tarjeta-proyecto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #e7edf3;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 32px rgba(8, 19, 36, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.tarjeta-proyecto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 42px rgba(8, 19, 36, 0.12);
+}
+.tarjeta-imagen {
+  position: relative;
+  aspect-ratio: 1.3 / 1;
+  overflow: hidden;
+  background: #dbeaf4;
+}
+.tarjeta-imagen img {
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.tarjeta-proyecto:hover .tarjeta-imagen img {
+  transform: scale(1.05);
+}
+.tarjeta-etiqueta {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #fff;
+  background: rgba(8, 19, 36, 0.72);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+.tarjeta-contenido {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+.tarjeta-contenido h3 {
+  margin: 0 0 10px;
+  color: var(--color-azul-noche);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: 1.28rem;
+}
+.tarjeta-contenido p {
+  min-height: 48px;
+  margin: 0 0 18px;
+  color: var(--color-texto-secundario);
+  line-height: 1.6;
+}
+.tarjeta-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 20px;
+  color: var(--color-texto-secundario);
+  font-size: 0.8rem;
+}
+.tarjeta-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.tarjeta-pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-top: 1px solid #edf1f5;
+  padding-top: 16px;
+  margin-top: auto;
+}
+.tarjeta-precio small {
+  display: block;
+  color: var(--color-texto-secundario);
+  font-size: 0.7rem;
+}
+.tarjeta-precio strong {
+  color: var(--color-azul-noche);
+  font-size: 1rem;
+}
+.enlace-flecha {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-azul-principal);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+.enlace-flecha:hover svg {
+  transform: translateX(3px);
+}
+.enlace-flecha svg {
+  transition: transform 0.2s ease;
+}

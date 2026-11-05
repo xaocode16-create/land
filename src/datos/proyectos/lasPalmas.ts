@@ -1,0 +1,32 @@
+export const proyectoLasPalmas = {
+  id: 4,
+  identificador: "las-palmas-de-san-ignacio",
+  nombre: "Las Palmas de San Ignacio",
+  tituloComercial: "El lugar donde comienza tu próximo gran proyecto.",
+  descripcion: "Explora nuestros terrenos, descubre sus características y encuentra el espacio ideal para tu futuro.",
+  ubicacion: "San Ignacio, San Martín",
+  latitud: -6.4638767,
+  longitud: -76.3594666,
+  enlaceMapa: "https://www.google.com/maps/search/?api=1&query=-6.4638767,-76.3594666",
+  imagenPrincipal: "/imagenes/proyectos/las-palmas/poster-video.jpg",
+  video: "/videos/proyectos/las-palmas-de-san-ignacio-1080p.mp4",
+  videoMovil: "/videos/proyectos/las-palmas-de-san-ignacio-mobile.mp4",
+  posterVideo: "/imagenes/proyectos/las-palmas/poster-video.jpg",
+  plano: "/imagenes/proyectos/las-palmas/plano.jpg",
+  imagenes: [
+    "/imagenes/proyectos/las-palmas/poster-video.jpg",
+    "/imagenes/proyectos/las-palmas/plano.jpg",
+  ],
+  caracteristicas: [
+    "22 registros de lotes en la hoja de precios recibida",
+    "Precios referenciales en dólares y soles",
+    "Plano de referencia con selección visual por lote",
+  ],
+  notaUbicacion: "Ubicación indicada por el enlace de Google Maps compartido. Accesos y distancias comerciales deben confirmarse con un asesor.",
+  notaLegal: "Los materiales registrales se mantienen en revisión interna y no se publican automáticamente.",
+  preguntas: [
+    { pregunta: "¿Los lotes están disponibles?", respuesta: "La disponibilidad de los 22 registros está por confirmar. Escríbenos para consultar el lote que te interesa." },
+    { pregunta: "¿Qué área debo tomar como definitiva?", respuesta: "Cuando el plano y el Excel difieren, ambas superficies se muestran separadas. La medida definitiva debe confirmarse con un asesor." },
+    { pregunta: "¿Puedo solicitar una visita?", respuesta: "Sí, puedes solicitar coordinación por WhatsApp. La visita y sus condiciones quedan sujetas a confirmación comercial." },
+  ],
+} as const;

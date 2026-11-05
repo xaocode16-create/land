@@ -1,0 +1,92 @@
+.pie-pagina {
+  padding: 0;
+  color: rgba(255, 255, 255, 0.76);
+  background: #173452;
+}
+.pie-marco { overflow: hidden; border-radius: 0; padding: 24px; background: #173452; }
+.pie-contenido { width: 100%; }
+.pie-llamado { margin-bottom: 28px; border-radius: 12px; padding: 18px; background: #234767; }
+.pie-llamado > span { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px; color: #46c5f5; font-size: .78rem; font-weight: 900; }
+.pie-llamado > span i { font-size: 1rem; }
+.pie-llamado h2 { margin: 0 0 14px; color: #fff; font-family: "Manrope", "Segoe UI", sans-serif; font-size: clamp(1.45rem, 3vw, 2rem); letter-spacing: -.03em; }
+.pie-llamado p { margin: 0; color: rgba(255,255,255,.72); font-size: 1rem; }
+.pie-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr;
+  gap: 50px;
+  padding: 0 0 32px;
+}
+.pie-identidad { display: grid; align-content: start; }
+.marca-pie {
+  display: inline-grid;
+  justify-items: start;
+  width: fit-content;
+  margin-bottom: 12px;
+  color: #fff;
+  line-height: 1;
+}
+.marca-pie strong { font-size: 1.45rem; letter-spacing: -.04em; }
+.marca-pie small { margin-top: 8px; color: #46c5f5; font-size: .78rem; font-weight: 900; letter-spacing: .08em; }
+.marca-pie:hover strong { color: #46c5f5; }
+.pie-descripcion { max-width: 330px; margin: 0; color: rgba(255,255,255,.75); line-height: 1.7; }
+.pie-columna h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+.pie-columna h3 i { color: #46c5f5; font-size: 1rem; }
+.pie-enlaces {
+  display: grid;
+  gap: 11px;
+  font-size: .88rem;
+}
+.pie-enlaces a { display: inline-flex; align-items: center; gap: 7px; color: rgba(255,255,255,.76); }
+.pie-enlaces svg,
+.pie-enlaces i { flex: 0 0 auto; color: #46c5f5; font-size: 1rem; }
+.pie-enlaces a:hover {
+  color: #46c5f5;
+}
+.pie-bajo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 2px solid rgba(115, 180, 215, .26);
+  padding: 26px 0 6px;
+  font-size: 0.78rem;
+}
+.redes-sociales {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+.red-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #46c5f5;
+}
+.red-social:hover {
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .pie-pagina { padding: 0; }
+  .pie-marco { padding: 18px; border-radius: 0; }
+  .pie-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 22px;
+  }
+  .pie-grid > :first-child {
+    grid-column: 1 / -1;
+  }
+  .pie-bajo {
+    display: grid;
+    gap: 10px;
+  }
+}

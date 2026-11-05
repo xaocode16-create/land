@@ -1,0 +1,40 @@
+.panel-lote { position: sticky; top: 104px; display: grid; gap: 18px; border: 1px solid #dbe6ef; border-radius: 18px; padding: 24px; background: #fff; box-shadow: 0 18px 55px rgba(8,19,36,.08); }
+.panel-cabecera { display: flex; align-items: start; justify-content: space-between; gap: 14px; }
+.boton-cerrar-panel, .fondo-panel-lote { display: none; }
+.panel-etiqueta { color: var(--color-azul-principal); font-size: .68rem; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
+.panel-cabecera h3 { margin: 7px 0 0; color: var(--color-azul-noche); font-family: "Manrope", sans-serif; font-size: 2.2rem; letter-spacing: -.06em; }
+.panel-proyecto { margin: -12px 0 0; color: var(--color-texto-secundario); font-size: .9rem; }
+.estado-lote { display: inline-flex; align-items: center; border-radius: 999px; padding: 7px 10px; color: #7b650e; background: #fff4cc; font-size: .7rem; font-weight: 900; white-space: nowrap; }
+.dato-destacado { display: grid; gap: 4px; border-radius: 14px; padding: 16px; color: #fff; background: linear-gradient(135deg, #071b31, #0b4265); }
+.dato-destacado span, .dato-destacado small { color: rgba(255,255,255,.7); font-size: .75rem; }
+.dato-destacado strong { font-family: "Manrope", sans-serif; font-size: 2.1rem; letter-spacing: -.06em; }
+.alerta-superficie { display: flex; align-items: start; gap: 10px; border: 1px solid #f0d88a; border-radius: 12px; padding: 13px; color: #7b650e; background: #fff9e8; font-size: .82rem; line-height: 1.5; }
+.alerta-superficie div { display: grid; gap: 3px; }
+.alerta-superficie span { color: #8d7b37; font-size: .76rem; }
+.precios-lote { display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px; }
+.precios-lote > div { display: grid; gap: 4px; border: 1px solid #e4edf3; border-radius: 11px; padding: 12px; }
+.precios-lote span, .precios-lote small { color: var(--color-texto-secundario); font-size: .7rem; }
+.precios-lote strong { color: var(--color-azul-noche); font-size: 1rem; }
+.precios-lote > div:last-child { grid-column: 1 / -1; }
+.ficha-lote { display: grid; gap: 12px; margin: 0; }
+.ficha-lote div { display: grid; gap: 4px; }
+.ficha-lote dt { display: flex; align-items: center; gap: 6px; color: var(--color-azul-noche); font-size: .76rem; font-weight: 900; }
+.ficha-lote dd { margin: 0; color: var(--color-texto-secundario); font-size: .8rem; line-height: 1.5; }
+.caracteristicas-lote h4 { margin: 0 0 8px; color: var(--color-azul-noche); font-size: .82rem; }
+.caracteristicas-lote ul { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; color: var(--color-texto-secundario); font-size: .8rem; }
+.caracteristicas-lote li { display: flex; align-items: start; gap: 7px; }
+.caracteristicas-lote svg { flex: 0 0 auto; color: #1fa774; }
+.observacion-lote { display: flex; align-items: start; gap: 7px; margin: 0; color: #7b650e; font-size: .78rem; line-height: 1.5; }
+.acciones-lote { display: flex; flex-wrap: wrap; gap: 8px; }
+.acciones-lote > * { flex: 1 1 145px; }
+.acciones-lote button { min-height: 44px; padding: 0 12px; font-size: .77rem; }
+.fuente-lote { margin: 0; color: #8a98a5; font-size: .7rem; line-height: 1.5; }
+@media (max-width: 980px) { .panel-lote { position: static; } }
+@media (max-width: 640px) {
+  .fondo-panel-lote { position: fixed; inset: 0; z-index: 60; display: block; width: 100%; height: 100%; border: 0; padding: 0; background: rgba(4, 16, 31, .72); }
+  .panel-movil-cerrado { display: none; }
+  .panel-movil-abierto { position: fixed; inset: 12px 10px 12px; z-index: 70; display: grid; max-height: calc(100dvh - 24px); overflow-y: auto; padding: 18px; border-radius: 20px; background: #fff; box-shadow: 0 24px 80px rgba(4, 16, 31, .38); }
+  .boton-cerrar-panel { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; flex: 0 0 38px; border: 1px solid #dbe6ef; border-radius: 999px; color: var(--color-azul-noche); background: #fff; cursor: pointer; }
+  .panel-cabecera { align-items: center; }
+}
+@media (max-width: 520px) { .panel-lote { padding: 18px; } .precios-lote { grid-template-columns: 1fr; } .precios-lote > div:last-child { grid-column: auto; } }

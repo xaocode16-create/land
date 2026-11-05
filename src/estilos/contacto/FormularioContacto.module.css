@@ -1,0 +1,34 @@
+.formulario-contacto {
+  display: grid;
+  gap: 18px;
+}
+.formulario-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.formulario-ancho {
+  grid-column: 1 / -1;
+}
+.formulario-ayuda {
+  margin: -6px 0 0;
+  color: var(--color-texto-secundario);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+.mensaje-formulario {
+  border-radius: 9px;
+  padding: 12px 14px;
+  color: #15516f;
+  background: #effaff;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 640px) {
+  .formulario-grid {
+    grid-template-columns: 1fr;
+  }
+  .formulario-ancho {
+    grid-column: auto;
+  }
+}

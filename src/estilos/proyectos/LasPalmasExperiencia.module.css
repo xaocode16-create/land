@@ -1,0 +1,27 @@
+.experiencia-las-palmas { background: var(--color-gris-claro); }
+.resumen-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: center; }
+.acciones-resumen { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.resumen-metricas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.resumen-metricas div { display: grid; gap: 7px; min-height: 150px; border: 1px solid #dbe6ee; border-radius: 15px; padding: 18px; background: #fff; }
+.resumen-metricas strong { color: var(--color-azul-noche); font-family: "Manrope", sans-serif; font-size: 2rem; letter-spacing: -.06em; }
+.resumen-metricas span { color: var(--color-texto-secundario); font-size: .75rem; line-height: 1.45; }
+.seccion-visual { background: #fff; }
+.seccion-plano { background: #f0f6fa; }
+.plano-grid { display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(340px, .72fr); gap: 28px; align-items: start; }
+.seccion-comparacion { padding: 0 0 80px; background: #fff; }
+.informacion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.informacion-grid h3 { margin: 22px 0 10px; color: var(--color-azul-noche); font-size: 1.15rem; }
+.informacion-grid p { color: var(--color-texto-secundario); font-size: .9rem; line-height: 1.65; }
+.informacion-grid .lista-caracteristicas { margin: 0; }
+.icono-informacion { color: var(--color-azul-principal); }
+.nota-informacion { margin-bottom: 0; color: #8a98a5 !important; font-size: .78rem !important; }
+.seccion-faq { background: #f0f6fa; }
+.faq-lista { display: grid; max-width: 860px; gap: 9px; }
+.faq-lista details { border: 1px solid #dbe6ee; border-radius: 13px; padding: 0 18px; background: #fff; }
+.faq-lista summary { cursor: pointer; padding: 18px 0; color: var(--color-azul-noche); font-weight: 900; list-style: none; }
+.faq-lista summary::-webkit-details-marker { display: none; }
+.faq-lista summary::after { float: right; color: var(--color-azul-principal); content: "+"; font-size: 1.3rem; }
+.faq-lista details[open] summary::after { content: "–"; }
+.faq-lista details p { max-width: 720px; margin: -2px 0 18px; color: var(--color-texto-secundario); font-size: .9rem; line-height: 1.65; }
+@media (max-width: 980px) { .resumen-grid, .plano-grid { grid-template-columns: 1fr; } .informacion-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .resumen-metricas { grid-template-columns: 1fr; } .resumen-metricas div { min-height: auto; } .informacion-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,93 @@
+.cabecera-interna {
+  position: relative;
+  display: block;
+  min-height: min(520px, 68vh);
+  align-items: end;
+  overflow: hidden;
+  padding: 136px 0 76px;
+  color: #fff;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(0, 200, 248, 0.22), transparent 30%),
+    var(--color-azul-noche);
+}
+.cabecera-video,
+.cabecera-capa {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.cabecera-video {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.92;
+  filter: saturate(0.94) contrast(0.98);
+}
+.cabecera-capa {
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(8, 19, 36, 0.7), rgba(8, 19, 36, 0.38)), linear-gradient(0deg, rgba(8, 19, 36, 0.3), transparent 64%);
+}
+.cabecera-interna::after {
+  position: absolute;
+  top: -330px;
+  right: -120px;
+  width: 620px;
+  height: 620px;
+  border: 1px solid rgba(0, 200, 248, 0.2);
+  border-radius: 50%;
+  content: "";
+  z-index: 2;
+}
+.cabecera-interna > :global(.contenedor-pagina) {
+  position: relative;
+  z-index: 3;
+  width: min(1180px, calc(100% - 40px));
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+.cabecera-interna + :global(.seccion) {
+  padding-top: 48px;
+}
+.cabecera-interna .etiqueta-seccion {
+  gap: 9px;
+}
+.cabecera-interna .etiqueta-seccion::before {
+  display: none;
+}
+.cabecera-interna .etiqueta-seccion i {
+  font-size: 1rem;
+}
+.cabecera-interna h1 {
+  max-width: 780px;
+  margin: 15px 0 14px;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 3.8vw, 3.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+}
+
+@media (max-width: 640px) {
+  .cabecera-interna {
+    min-height: min(430px, 62vh);
+    padding: 112px 0 58px;
+  }
+
+  .cabecera-interna h1 {
+    font-size: clamp(2rem, 9vw, 3.1rem);
+  }
+
+  .cabecera-interna + :global(.seccion) {
+    padding-top: 36px;
+  }
+}
+.cabecera-interna p {
+  max-width: 640px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  text-align: left;
+}

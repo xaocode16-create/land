@@ -1,0 +1,10 @@
+node_modules
+.next
+.next-*/
+out
+.env*
+!.env.example
+*.log
+*.tsbuildinfo
+.respaldo-*.zip
+prueba-escritura/

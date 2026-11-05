@@ -1,0 +1,162 @@
+.encabezado-principal {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 14px 0;
+  color: #fff;
+  --color-marca: #fff;
+  --color-marca-secundario: rgba(255, 255, 255, 0.66);
+  transition:
+    background 0.3s ease,
+    padding 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease;
+}
+.encabezado-principal.encabezado-desplazado {
+  padding: 10px 0;
+  color: var(--color-azul-noche);
+  --color-marca: var(--color-azul-noche);
+  --color-marca-secundario: rgba(8, 19, 36, 0.62);
+  background: rgba(218, 242, 255, 0.97);
+  box-shadow: 0 8px 30px rgba(32, 104, 145, 0.16);
+  backdrop-filter: blur(16px);
+}
+.encabezado-principal.encabezado-solido {
+  color: #fff;
+  --color-marca: #fff;
+  --color-marca-secundario: rgba(255, 255, 255, 0.66);
+  background: transparent;
+}
+.encabezado-principal.encabezado-solido.encabezado-desplazado {
+  color: var(--color-azul-noche);
+  --color-marca: var(--color-azul-noche);
+  --color-marca-secundario: rgba(8, 19, 36, 0.62);
+  background: rgba(218, 242, 255, 0.97);
+}
+.encabezado-principal.encabezado-solido .navegacion-escritorio {
+  color: rgba(255, 255, 255, 0.76);
+}
+.encabezado-principal.encabezado-solido .enlace-navegacion:hover,
+.encabezado-principal.encabezado-solido .enlace-navegacion.activo {
+  color: #fff;
+}
+.encabezado-principal.encabezado-solido.encabezado-desplazado .navegacion-escritorio {
+  color: rgba(8, 19, 36, 0.72);
+}
+.encabezado-principal.encabezado-solido.encabezado-desplazado .enlace-navegacion:hover,
+.encabezado-principal.encabezado-solido.encabezado-desplazado .enlace-navegacion.activo {
+  color: var(--color-azul-noche);
+}
+.barra-navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.navegacion-escritorio {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.86rem;
+}
+.encabezado-principal.encabezado-desplazado .navegacion-escritorio {
+  color: rgba(8, 19, 36, 0.72);
+}
+.enlace-navegacion {
+  position: relative;
+  padding: 10px 0;
+  transition: color 0.2s ease;
+}
+.encabezado-principal.encabezado-desplazado .enlace-navegacion:hover,
+.encabezado-principal.encabezado-desplazado .enlace-navegacion.activo {
+  color: var(--color-azul-noche);
+}
+.enlace-navegacion:hover,
+.enlace-navegacion.activo {
+  color: #fff;
+}
+.enlace-navegacion.activo::after {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+  border-radius: 3px;
+  background: var(--color-azul-cian);
+  content: "";
+}
+.boton-menu {
+  display: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 10px;
+  color: #fff;
+  background: transparent;
+}
+.encabezado-principal.encabezado-desplazado .boton-menu {
+  border-color: rgba(8, 19, 36, 0.2);
+  color: var(--color-azul-noche);
+}
+.encabezado-principal.encabezado-solido .boton-menu {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+.encabezado-principal.encabezado-solido.encabezado-desplazado .boton-menu {
+  border-color: rgba(8, 19, 36, 0.2);
+  color: var(--color-azul-noche);
+}
+
+.boton-ayuda {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 0 15px;
+  color: inherit;
+  background: rgba(8, 19, 36, 0.16);
+  font-size: 0.78rem;
+  font-weight: 800;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.boton-ayuda:hover {
+  border-color: var(--color-azul-cian);
+  background: rgba(14, 168, 231, 0.18);
+}
+.encabezado-principal.encabezado-desplazado .boton-ayuda {
+  border-color: rgba(8, 19, 36, 0.18);
+  color: var(--color-azul-noche);
+  background: rgba(255, 255, 255, 0.42);
+}
+.encabezado-principal.encabezado-solido .boton-ayuda {
+  color: #fff;
+  background: rgba(8, 19, 36, 0.24);
+}
+.encabezado-principal.encabezado-solido.encabezado-desplazado .boton-ayuda {
+  color: var(--color-azul-noche);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+@media (max-width: 980px) {
+  .navegacion-escritorio {
+    display: none;
+  }
+  .boton-ayuda {
+    display: inline-flex;
+    width: 40px;
+    min-height: 40px;
+    padding: 0;
+  }
+  .boton-ayuda span {
+    display: none;
+  }
+  .boton-menu {
+    display: inline-flex;
+  }
+}

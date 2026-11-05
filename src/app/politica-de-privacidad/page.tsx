@@ -1,0 +1,8 @@
+import type { Metadata } from "next";
+import { CabeceraInterna } from "@/componentes/interfaz/CabeceraInterna";
+
+export const metadata: Metadata = { title: "Política de privacidad", description: "Borrador editable de política de privacidad para LAND Inmobiliaria." };
+
+export default function PoliticaPrivacidad() {
+  return <><CabeceraInterna etiqueta="Información legal" titulo="Política de privacidad" descripcion="Borrador editable: debe ser revisado y aprobado por el responsable legal antes de publicar." /><section className="seccion bg-white"><div className="contenedor-pagina texto-legal"><p><strong>Nota de revisión:</strong> este documento es una base informativa y no constituye una política legal definitiva. Sustituye los textos según el tratamiento de datos real de LAND y la normativa aplicable.</p><h2>1. Información que se solicita</h2><p>El formulario de contacto puede solicitar nombre, teléfono, correo electrónico, proyecto de interés y mensaje. En esta primera versión, los datos no se almacenan en una base de datos del sitio.</p><h2>2. Uso del formulario</h2><p>Al enviar el formulario, se prepara un mensaje y se abre WhatsApp para que la persona continúe la conversación. El número oficial debe configurarse antes de publicar.</p><h2>3. Datos de contacto</h2><p>Completa esta sección con la identidad legal de la empresa, dirección, correo de privacidad, finalidades, plazos de conservación y derechos de los titulares.</p><h2>4. Actualizaciones</h2><p>Revisa este contenido cada vez que se añadan analíticas, formularios con backend, campañas o integraciones externas.</p></div></section></>;
+}

@@ -1,0 +1,80 @@
+.detalle-proyecto {
+  padding: 190px 0 90px;
+  background: var(--color-gris-claro);
+}
+.detalle-encabezado {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 52px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.detalle-encabezado h1 {
+  margin: 14px 0;
+  color: var(--color-azul-noche);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: clamp(2.7rem, 6vw, 5.2rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+.detalle-encabezado p {
+  color: var(--color-texto-secundario);
+  line-height: 1.75;
+}
+.detalle-portada {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.15 / 1;
+  border-radius: 20px;
+  box-shadow: var(--sombra-elegante);
+}
+.detalle-portada img {
+  object-fit: cover;
+}
+.datos-detalle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 24px 0;
+}
+.dato-detalle {
+  border: 1px solid #e3ebf2;
+  border-radius: 11px;
+  padding: 14px;
+  background: #fff;
+}
+.dato-detalle small {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-texto-secundario);
+  font-size: 0.72rem;
+}
+.dato-detalle strong {
+  color: var(--color-azul-noche);
+  font-size: 0.98rem;
+}
+
+.detalle-columnas {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+}
+
+@media (max-width: 980px) {
+  .detalle-encabezado,
+  .detalle-columnas {
+    grid-template-columns: 1fr;
+  }
+  .detalle-encabezado {
+    gap: 30px;
+  }
+  .detalle-portada {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 640px) {
+  .datos-detalle {
+    grid-template-columns: 1fr;
+  }
+}

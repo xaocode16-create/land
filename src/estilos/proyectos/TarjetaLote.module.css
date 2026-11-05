@@ -1,0 +1,10 @@
+.tarjeta-lote { display: flex; flex-direction: column; overflow: hidden; border: 1px solid #dce7ef; border-radius: 14px; background: #fff; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.tarjeta-lote:hover, .tarjeta-lote.seleccionado { border-color: var(--color-azul-principal); box-shadow: 0 12px 30px rgba(4,140,244,.12); transform: translateY(-2px); }
+.boton-tarjeta { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; border: 0; padding: 15px; color: var(--color-texto); background: transparent; text-align: left; }
+.boton-tarjeta strong { color: var(--color-azul-noche); font-size: 1.08rem; text-align: right; }
+.numero-lote { color: var(--color-azul-principal); font-size: .85rem; font-weight: 900; }
+.meta-lote { display: flex; align-items: center; gap: 5px; grid-column: 1 / -1; color: var(--color-texto-secundario); font-size: .75rem; }
+.boton-tarjeta > svg { grid-column: 2; grid-row: 1 / span 2; color: var(--color-azul-principal); }
+.boton-comparar { min-height: 34px; border: 0; border-top: 1px solid #edf2f5; color: var(--color-texto-secundario); background: #fbfdfe; font-size: .75rem; font-weight: 800; }
+.boton-comparar:hover:not(:disabled) { color: var(--color-azul-principal); background: #f1f8fd; }
+.boton-comparar:disabled { cursor: default; opacity: .55; }

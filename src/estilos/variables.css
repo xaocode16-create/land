@@ -1,0 +1,16 @@
+:root {
+  --color-azul-noche: #081324;
+  --color-azul-principal: #048cf4;
+  --color-azul-cian: #00c8f8;
+  --color-blanco: #ffffff;
+  --color-gris-claro: #f5f7fa;
+  --color-texto: #172033;
+  --color-texto-secundario: #64748b;
+  --sombra-elegante: 0 18px 60px rgba(8, 19, 36, 0.1);
+  --radio-pequeno: 9px;
+  --radio-medio: 12px;
+  --radio-grande: 16px;
+  --duracion-rapida: 0.2s;
+  --duracion-media: 0.35s;
+  --duracion-suave: 0.7s;
+}
