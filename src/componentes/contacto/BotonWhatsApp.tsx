@@ -14,3 +14,9 @@ export function BotonWhatsApp({ mensaje = "Hola, LAND Inmobiliaria. Quisiera rec
   if (!enlace) return <span className={clases} title="Configura el número oficial en src/configuracion/empresa.ts"><MessageCircle size={18} /> WhatsApp no configurado</span>;
   return <a className={clases} href={enlace} target="_blank" rel="noreferrer"><MessageCircle size={18} /> {etiqueta}</a>;
 }
+
+
+
+
+
+

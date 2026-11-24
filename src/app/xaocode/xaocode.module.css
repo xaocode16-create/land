@@ -1,0 +1,490 @@
+.shell {
+  min-height: 100vh;
+  color: #e8f1ff;
+  background:
+    radial-gradient(circle at 78% 4%, rgba(53, 119, 255, 0.22), transparent 32rem),
+    linear-gradient(180deg, #07111f 0%, #0a1729 48%, #f4f8fc 48%, #f4f8fc 100%);
+}
+
+.topbar {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.brandMark {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 10px;
+  color: #07111f;
+  background: linear-gradient(135deg, #80e9ff, #6b8cff);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.brandName {
+  font-size: 1rem;
+}
+
+.brandName span {
+  color: #80e9ff;
+}
+
+.topbarNav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: #b9c9df;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.topbarNav a:hover,
+.footerLinks a:hover {
+  color: #80e9ff;
+}
+
+.hero {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 86px 0 118px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(310px, 0.9fr);
+  align-items: center;
+  gap: 72px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #80e9ff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: currentColor;
+}
+
+.heroTitle {
+  max-width: 780px;
+  margin: 18px 0 22px;
+  color: #fff;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: clamp(2.7rem, 6vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.07em;
+}
+
+.heroTitle span {
+  color: #80e9ff;
+}
+
+.heroText {
+  max-width: 650px;
+  margin: 0;
+  color: #b9c9df;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0 19px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.buttonPrimary {
+  color: #07111f;
+  background: #80e9ff;
+}
+
+.buttonSecondary {
+  color: #e8f1ff;
+  border: 1px solid rgba(185, 201, 223, 0.34);
+}
+
+.buttonPrimary:hover,
+.buttonSecondary:hover {
+  transform: translateY(-2px);
+}
+
+.buttonPrimary:hover {
+  background: #b1f2ff;
+}
+
+.buttonSecondary:hover {
+  border-color: #80e9ff;
+}
+
+.orbit {
+  position: relative;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+}
+
+.orbit::before,
+.orbit::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(128, 233, 255, 0.24);
+  border-radius: 50%;
+  transform: rotate(-24deg);
+}
+
+.orbit::before {
+  width: 280px;
+  height: 190px;
+}
+
+.orbit::after {
+  width: 360px;
+  height: 250px;
+  transform: rotate(36deg);
+}
+
+.orbitCenter,
+.orbitNode {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 800;
+  text-align: center;
+}
+
+.orbitCenter {
+  width: 138px;
+  height: 138px;
+  color: #07111f;
+  background: linear-gradient(145deg, #fff, #80e9ff);
+  box-shadow: 0 0 70px rgba(128, 233, 255, 0.24);
+  font-size: 1.25rem;
+}
+
+.orbitNode {
+  width: 72px;
+  height: 72px;
+  color: #dce9fb;
+  border: 1px solid rgba(128, 233, 255, 0.32);
+  background: rgba(12, 30, 54, 0.9);
+  font-size: 0.72rem;
+}
+
+.nodeTikTok { top: 8px; right: 20px; }
+.nodeContent { right: 0; bottom: 45px; }
+.nodeReview { bottom: 15px; left: 20px; }
+.nodeAccess { top: 40px; left: 0; }
+
+.lightSection {
+  color: #10223b;
+  background: #f4f8fc;
+}
+
+.contentSection {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+.sectionHeading {
+  max-width: 730px;
+  margin-bottom: 42px;
+}
+
+.sectionHeading h2 {
+  margin: 14px 0 14px;
+  color: #10223b;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.sectionHeading p {
+  margin: 0;
+  color: #5c6f88;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  min-height: 230px;
+  padding: 28px;
+  border: 1px solid #dce6f1;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 35px rgba(15, 37, 66, 0.06);
+}
+
+.cardNumber {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  color: #0b6b9a;
+  background: #dff8ff;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.card h3 {
+  margin: 24px 0 10px;
+  color: #10223b;
+  font-size: 1.14rem;
+}
+
+.card p {
+  margin: 0;
+  color: #5c6f88;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.disclaimer {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-left: 3px solid #4f74ff;
+  color: #51657f;
+  background: #eaf0ff;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.legalStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  padding: 30px 34px;
+  border-radius: 16px;
+  color: #e8f1ff;
+  background: #10223b;
+}
+
+.legalStrip h2 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.legalStrip p {
+  margin: 0;
+  color: #b9c9df;
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.legalLink {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  border: 1px solid rgba(128, 233, 255, 0.36);
+  border-radius: 9px;
+  padding: 0 14px;
+  color: #80e9ff;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.legalLink:hover {
+  border-color: #80e9ff;
+  color: #fff;
+}
+
+.footer {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 34px 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #647994;
+  font-size: 0.84rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 18px;
+  font-weight: 700;
+}
+
+.legalPage {
+  width: min(860px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 76px 0 110px;
+  color: #18304e;
+}
+
+.legalPage h1 {
+  max-width: 720px;
+  margin: 16px 0 18px;
+  color: #fff;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+
+.legalIntro {
+  max-width: 700px;
+  margin: 0;
+  color: #b9c9df;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.legalBody {
+  margin-top: 58px;
+  padding: 34px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 16px 45px rgba(15, 37, 66, 0.08);
+}
+
+.legalBody h2 {
+  margin: 30px 0 10px;
+  color: #10223b;
+  font-size: 1.35rem;
+}
+
+.legalBody h2:first-child {
+  margin-top: 0;
+}
+
+.legalBody p,
+.legalBody li {
+  color: #5c6f88;
+  font-size: 0.98rem;
+  line-height: 1.78;
+}
+
+.legalBody ul {
+  margin: 10px 0 0;
+  padding-left: 22px;
+}
+
+.reviewNote {
+  margin-bottom: 28px;
+  padding: 16px 18px;
+  border-left: 3px solid #f0a44b;
+  color: #72501f;
+  background: #fff5e6;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.legalBack {
+  display: inline-flex;
+  margin-top: 24px;
+  color: #80e9ff;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 58px;
+  }
+
+  .orbit {
+    min-height: 300px;
+    transform: scale(0.88);
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .legalStrip,
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar,
+  .hero,
+  .contentSection,
+  .footer {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .topbarNav {
+    gap: 10px;
+    font-size: 0.76rem;
+  }
+
+  .topbarNav a:first-child {
+    display: none;
+  }
+
+  .hero {
+    padding-bottom: 75px;
+  }
+
+  .orbit {
+    min-height: 250px;
+    transform: scale(0.7);
+    margin: -24px 0;
+  }
+
+  .legalBody {
+    padding: 24px;
+  }
+}
