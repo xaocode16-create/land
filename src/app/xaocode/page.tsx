@@ -13,6 +13,7 @@ export default function XaoCodeInicio() {
               xaoCode Automatización es una propuesta para conectar flujos de contenido con redes sociales, como TikTok for Developers, mediante autorizaciones explícitas y acciones trazables.
             </p>
             <div className={styles.heroActions}>
+              <Link className={styles.buttonPrimary} href="/xaocode/tiktok/connect">Conectar TikTok</Link>
               <Link className={styles.buttonPrimary} href="/xaocode/terminos">Ver términos de servicio</Link>
               <Link className={styles.buttonSecondary} href="/xaocode/privacidad">Ver política de privacidad</Link>
             </div>
